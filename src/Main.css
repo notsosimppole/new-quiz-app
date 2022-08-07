@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla&display=swap');
+
+body {
+    background-color: #F5F7FB;
+}
+
+
+.main--area {
+    font-family: 'karla', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh !important;
+    width: 100%;
+    background-color: #F5F7FB;
+    color: #293264;
+    overflow: hidden !important;
+}
+
+
+.main--btn {
+    border: none;
+    border-radius: 5px;
+    height: 3rem;
+    margin-top: 1rem;
+    cursor: pointer;
+    font-family: 'karla', sans-serif;
+    width: 10%;
+    min-width: 160px;
+    background-color: #4D5B9E;
+    color: white;
+    font-size: 1.2rem;
+}
+
+.main--p {
+    justify-self: baseline;
+    margin-top: -0.7rem;
+    font-size: 1.2rem;
+}
+
+.blob-blue {
+    width: 30rem;
+    height: 30rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: -10%;
+    right: 0%;
+    top: 60%;
+    bottom: 0%;
+    overflow: hidden;
+    background-image: url("data:image/svg+xml;utf8, %3Csvg width=%22100%25%22 height=%22100%25%22 viewBox=%220 0 1000 1000%22 xmlns=%22http:%2F%2Fwww.w3.org%2F2000%2Fsvg%22 %3E %3Cdefs%3E %3CclipPath id=%22shape%22%3E %3Cpath fill=%22currentColor%22 d=%22M825%2C666.5Q766%2C833%2C585.5%2C874Q405%2C915%2C283.5%2C789Q162%2C663%2C118%2C479Q74%2C295%2C243%2C204.5Q412%2C114%2C597%2C130Q782%2C146%2C833%2C323Q884%2C500%2C825%2C666.5Z%22%3E%3C%2Fpath%3E %3C%2FclipPath%3E %3C%2Fdefs%3E %3Cg clip-path=%22url(%23shape)%22%3E %3Cpath fill=%22%23DEEBF8%22 d=%22M825%2C666.5Q766%2C833%2C585.5%2C874Q405%2C915%2C283.5%2C789Q162%2C663%2C118%2C479Q74%2C295%2C243%2C204.5Q412%2C114%2C597%2C130Q782%2C146%2C833%2C323Q884%2C500%2C825%2C666.5Z%22 %2F%3E %3C%2Fg%3E %3C%2Fsvg%3E");
+}
+
+.blob-yellow {
+    width: 30rem;
+    overflow: hidden;
+    height: 30rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 80%;
+    right: 0%;
+    top: -30%;
+    bottom: 0%;
+    background-image: url("data:image/svg+xml;utf8, %3Csvg width=%22100%25%22 height=%22100%25%22 viewBox=%220 0 1000 1000%22 xmlns=%22http:%2F%2Fwww.w3.org%2F2000%2Fsvg%22 %3E %3Cdefs%3E %3CclipPath id=%22shape%22%3E %3Cpath fill=%22currentColor%22 d=%22M871%2C648.5Q797%2C797%2C648.5%2C870Q500%2C943%2C330.5%2C891Q161%2C839%2C100%2C669.5Q39%2C500%2C127.5%2C358Q216%2C216%2C358%2C129.5Q500%2C43%2C662%2C109.5Q824%2C176%2C884.5%2C338Q945%2C500%2C871%2C648.5Z%22%3E%3C%2Fpath%3E %3C%2FclipPath%3E %3C%2Fdefs%3E %3Cg clip-path=%22url(%23shape)%22%3E %3Cpath fill=%22%23FFFAD1%22 d=%22M871%2C648.5Q797%2C797%2C648.5%2C870Q500%2C943%2C330.5%2C891Q161%2C839%2C100%2C669.5Q39%2C500%2C127.5%2C358Q216%2C216%2C358%2C129.5Q500%2C43%2C662%2C109.5Q824%2C176%2C884.5%2C338Q945%2C500%2C871%2C648.5Z%22 %2F%3E %3C%2Fg%3E %3C%2Fsvg%3E");
+}
+
+.neya-div {
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
