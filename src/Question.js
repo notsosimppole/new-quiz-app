@@ -17,32 +17,33 @@ export default function Questions(props) {
                 id: nanoid(),
                 value: ans,
                 isCorrect: ans === props.correctAns ? true : false,
-                isSelected: false
+                isSelected: false,
+                isConv: true
             }
         }))
-        console.log("me sab kuch chodd rha hu")
     }, [ansList, props.correctAns])
 
     if (props.incorrectAns.length === 0) {
         return <h1 className='loading'>Loading</h1>
     }
 
-    const handleAnsClick = (event, id) => {
+    const handleAnsClick = (event, id, isCorrectAns) => {
         event.preventDefault();
+
+            props.setScore(10)
+
         setAnsData(prevData => {
             return prevData.map(data => {
-                return data.id === id ? { ...data, isSelected: true } : { ...data, isSelected: false }
+                return data.id === id ? { ...data, isSelected: true, isConv: false } : { ...data, isSelected: false, isConv: false }
             })
         })
+        console.log(isCorrectAns)
         
     }
-    console.log(ansData)
 
 
-
-    let ansElem = {}
     ansList = [...new Set(ansList)]
-    ansElem = ansData?.map(data => (
+    let ansElem = ansData?.map(data => (
         <AnsBtn key = {data.id}
         ans={decode(data.value)}
         isSub={props?.isSub}
@@ -58,6 +59,7 @@ export default function Questions(props) {
             <span className="answers">
                 {ansElem}
             </span>
+        
         </div>
     )
 }

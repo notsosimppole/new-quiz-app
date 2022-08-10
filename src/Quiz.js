@@ -6,9 +6,7 @@ import { nanoid } from 'nanoid';
 
 export default function Quiz() {
     const [ques, setQues] = useState({})
-    const [isSub, setIsSub] = useState(false)
-    const [active, setActive] = useState('')
-
+    const [score, setScore] = useState(0)
     useEffect(() => {
         const fun = async () => {
             let res = await fetch('https://opentdb.com/api.php?amount=5');
@@ -21,11 +19,8 @@ export default function Quiz() {
     if (Object.keys(ques).length === 0) {
         return <h1 className='loading'>Loading</h1>;
     }
-
-    //TODO : Active - ID - set styles acc to active
-    //TODO : Count on basis of active
-
-
+    
+    
 
     const quesElem = ques?.results.map(que => {
         let q = decode(que.question)
@@ -36,25 +31,18 @@ export default function Quiz() {
             question={q}
             correctAns={que.correct_answer}
             incorrectAns={que.incorrect_answers}
-            isSub = {isSub}
-            //setActive = {(id) => setActive(id)}
+            isSub = {true}
+            setScore = {setScore}
         />)
+        
     }
     )
-
-    const handleSubmit = (event) =>{
-        event.preventDefault();
-        setIsSub(prev => !prev)
-    }
-    console.log(active);
+    console.log(score)
     return (
         <div className='quiz'>
             <h1>Quiz Time</h1>
             {quesElem}
-
-            <div className="quiz-btn-div">
-                <button className="quiz-btn" onClick = {handleSubmit}>Submit</button>
-            </div>
+            {<h2>Your Score is {score}</h2>}
         </div>
     )
 }
