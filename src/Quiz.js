@@ -42,7 +42,7 @@ export default function Quiz() {
         <div className='quiz'>
             <h1>Quiz Time</h1>
             {quesElem}
-            {<h2>Your Score is {score}</h2>}
+            {/* {<h2>Your Score is {score}</h2>} */}
         </div>
     )
 }
